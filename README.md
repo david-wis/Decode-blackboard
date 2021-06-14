@@ -4,7 +4,7 @@ Programa para solucionar el bug del editor de ecuaciones de blackboard
 
 ## Uso
 
-TBD
+Para instrucciones de uso ver el video en la carpeta demo
 
 ## Contribuciones
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
