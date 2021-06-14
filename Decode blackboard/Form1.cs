@@ -37,7 +37,7 @@ namespace Decode_blackboard
             {
                 // Primero se cambian los « y » por < y >, y los ¨ por ' y para que el servicio pueda leer el mathml
                 // Además, se reemplazan los signos + por su representacion para urls (%2B)
-                string newText = rawText.Replace("»", ">").Replace("«", "<").Replace("¨", "'").Replace("+", "%2B");
+                string newText = rawText.Replace("»", ">").Replace("«", "<").Replace("¨", "'").Replace("+", "%2B").Replace("§#60;", "=");
 
                 // Luego se reemplazan los caracteres especiales por sus respectivas encodificaciones en unicode
                 // Esto permite que caracteres como el ∞ se puedan cargar en la imagen
@@ -48,8 +48,8 @@ namespace Decode_blackboard
 
                 try
                 {
-                    picture.Load($"{url}?mml={cleanedString}"); // Llamado al servicio de wiris.net para generar la foto
                     Console.WriteLine($"{url}?mml={cleanedString}");
+                    picture.Load($"{url}?mml={cleanedString}"); // Llamado al servicio de wiris.net para generar la foto
                 } 
                 catch (Exception)
                 {
